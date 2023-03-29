@@ -20,7 +20,7 @@ This project has trained two parts in the model download link is as follows:
 
 Plant extraction models and Shoots counting model are available from the Google Cloud Disk link provided [here](https://drive.google.com/drive/folders/1VPvSQLNZcN59cFrX5FQLsbFe32mmYggw?usp=share_link).
 
-Also available from our OneDrive link. [link](https://zqy7y-my.sharepoint.com/:f:/g/personal/lin_zqy7y_onmicrosoft_com/Eop0v_JudAxBoYrpk2sMNowBpjUBVWD9E2KMLoxOQ_LWYA?e=gxIZ0t)
+Also available from our OneDrive [link](https://zqy7y-my.sharepoint.com/:f:/g/personal/lin_zqy7y_onmicrosoft_com/Eop0v_JudAxBoYrpk2sMNowBpjUBVWD9E2KMLoxOQ_LWYA?e=gxIZ0t).
 
 After downloading, please put the Plant extraction model and Shoots counting model under the model_best folder.
 
