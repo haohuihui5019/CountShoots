@@ -9,7 +9,7 @@ import model
 import time
 import predict
 from yolo import YOLO
-
+from gevent import pywsgi
 app = Flask(__name__)
 
 
@@ -56,7 +56,7 @@ def home():
 
 @app.route('/images', methods=['POST'])
 def get_images():
-    path = "static/cut"  # 文件夹路径
+    path = 'static/cut'  # 文件夹路径
     count = 0
     an = []
     an.clear()
@@ -67,7 +67,6 @@ def get_images():
         bn.append(Getcount(path + '\\' + file))
         count = count + 1
     print(count)
-
     images = []
     temp = 0
     for i in range(count):
@@ -77,12 +76,9 @@ def get_images():
         c['img'] = a
         c['description'] = b
         print(c)
-        print(temp)
         images.append(c)
         # images[temp] = {'img': a, 'description': b}
-        print(temp)
         temp = temp + 1
-        print(temp)
     response = jsonify({'data': {'list': images}})
     response.headers['Cache-Control'] = 'no-cache'
     response.headers['Expires'] = '-1'
@@ -96,7 +92,7 @@ def Getcount(image_path):
     image = imageio.imread(file)
     img = Image.fromarray(image)
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weight_path', type=str, default='best_model_mae-7.94_epoch-962.pth',
+    parser.add_argument('--weight_path', type=str, default='model_best/best_model_mae-7.94_epoch-962.pth',
                         help='saved model path')
     parser.add_argument('--device', default='0', help='assign device')
     parser.add_argument('--batch-size', type=int, default=1,
