@@ -47,3 +47,11 @@ pillow
 gradio
 gdown
 ```
+
+
+# Demonstration
+We provide a number of photos for testing under the image_test folder.
+Users can use the photos we provide to test.
+For user convenience, this is the traditional Python project startup method, with no arguments. Before running the app file, you need to configure the environment configuration as needed and place the trained model we provided under the model_best folder.
+Here's our demo video.
+https://user-images.githubusercontent.com/41892352/229145707-8a948a34-3da6-4114-93f2-4afa2ce2c783.mp4
